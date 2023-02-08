@@ -7,7 +7,7 @@
  */
 
 // Replace contact@example.com with your real receiving email address
-$receiving_email_address = 'cristhianpelaez13@gmail.com.com';
+$receiving_email_address = 'cristhianpelaez13@gmail.com';
 
 if (
     file_exists(
