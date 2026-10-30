@@ -1,584 +1,438 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>Zealep Soluciones | Desarrollo de Software y Consultoría Tecnológica</title>
-  <meta
-    content="Zealep Soluciones ofrece desarrollo de software a medida, aplicaciones web y móviles, y consultoría tecnológica para potenciar tu negocio en Perú."
-    name="description">
-  <meta
-    content="software, desarrollo web, tecnologia, empresa, web, programacion, consultoria, aplicaciones moviles, peru, lima"
-    name="keywords">
-
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://zealepsoluciones.com/">
-  <meta property="og:title" content="Zealep Soluciones | Desarrollo de Software y Consultoría Tecnológica.">
-  <meta property="og:description"
-    content="Zealep Soluciones ofrece desarrollo de software a medida, aplicaciones web y móviles, y consultoría tecnológica para potenciar tu negocio en Perú.">
-  <meta property="og:image" content="assets/img/zealep-logo-blanco.png">
-
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://zealepsoluciones.com/">
-  <meta property="twitter:title" content="Zealep Soluciones | Desarrollo de Software y Consultoría Tecnológica">
-  <meta property="twitter:description"
-    content="Zealep Soluciones ofrece desarrollo de software a medida, aplicaciones web y móviles, y consultoría tecnológica para potenciar tu negocio en Perú.">
-  <meta property="twitter:image" content="assets/img/zealep-logo-blanco.png">
-
-  <!-- Favicons -->
-  <link href="assets/img/faviconzealep.png" rel="icon">
-  <link href="assets/img/faviconzealep.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-    rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zealep Soluciones · Desarrollo de software a medida en Perú</title>
+<meta name="description" content="Zealep Soluciones: desarrollo de software a medida, aplicaciones web y móviles, integración de sistemas y consultoría tecnológica en Lima, Perú. Del requerimiento a producción.">
+<meta name="theme-color" content="#201e1d">
+<link rel="icon" href="logo/svg/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="logo/png/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="logo/png/favicon-180.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Zealep Soluciones · Del requerimiento a producción">
+<meta property="og:description" content="Software a medida, apps web y móviles, integraciones e IA para empresas en Perú.">
+<meta property="og:image" content="https://zealepsoluciones.com/logo/png/zealep-horizontal-sobre-rojo.png">
+<meta property="og:url" content="https://zealepsoluciones.com/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Zealep Soluciones","url":"https://zealepsoluciones.com","logo":"https://zealepsoluciones.com/logo/png/zealep-horizontal-color.png","image":"https://zealepsoluciones.com/logo/png/zealep-horizontal-color.png","email":"cristhianpelaez@zealepsoluciones.com","telephone":"+51 994339535","slogan":"Del requerimiento a producción","address":{"@type":"PostalAddress","streetAddress":"Jirón Rutherford 191","addressLocality":"San Borja, Lima","addressCountry":"PE"},"areaServed":"PE"}
+</script>
 </head>
+<body class="is-loading">
 
-<body>
+<!-- ───────── Preloader: la Z se dibuja ───────── -->
+<div class="loader" aria-hidden="true">
+  <svg class="loader-mark" viewBox="0 2.5 46 42.5">
+    <circle cx="7" cy="10" r="4" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    <path d="M12 10H40L10 38H34" fill="none" stroke="currentColor" stroke-width="6" stroke-miterlimit="10" pathLength="1"/>
+    <rect x="34" y="33" width="10" height="10"/>
+  </svg>
+  <span class="loader-count">0</span>
+</div>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top ">
-    <div class="container nav-shell d-flex align-items-center">
+<div class="scroll-progress" aria-hidden="true"></div>
+<div class="cursor" aria-hidden="true"><span class="cursor-dot"></span><span class="cursor-ring"></span></div>
 
-      <a href="index.html" class="logo"><img src="assets/img/zealep-logo-header.png" alt="Zealep Soluciones Logo"></a>
-
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Inicio</a></li>
-          <li><a class="nav-link scrollto" href="#about">Acerca</a></li>
-          <li><a class="nav-link scrollto" href="#services">Servicios</a></li>
-          <li><a class="nav-link scrollto" href="#process">Proceso</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Contacto</a></li>
-          <li><a class="getstarted scrollto" href="#contact">Cotizar</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
+<!-- ───────── Navegación ───────── -->
+<nav class="nav" aria-label="Principal">
+  <div class="wrap nav-inner">
+    <a href="#inicio" class="nav-logo"><img src="logo/svg/zealep-horizontal-blanco.svg" alt="Zealep"></a>
+    <div class="nav-links">
+      <a href="#servicios" class="nav-link">Servicios</a>
+      <a href="#ruta" class="nav-link">Cómo trabajamos</a>
+      <a href="#proyectos" class="nav-link">Proyectos</a>
+      <a href="#estimador" class="nav-link">Estimador</a>
+      <a href="#faq" class="nav-link">FAQ</a>
     </div>
-  </header><!-- End Header -->
+    <a href="#contacto" class="btn btn-primary nav-cta magnetic">Cuéntanos tu proyecto</a>
+    <button class="nav-burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span></button>
+  </div>
+</nav>
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center">
+<div class="menu" aria-hidden="true">
+  <div class="wrap menu-inner">
+    <a href="#servicios"><small>01</small>Servicios</a>
+    <a href="#ruta"><small>02</small>Cómo trabajamos</a>
+    <a href="#proyectos"><small>03</small>Proyectos</a>
+    <a href="#estimador"><small>04</small>Estimador</a>
+    <a href="#faq"><small>05</small>FAQ</a>
+    <a href="#contacto" class="menu-cta"><small>→</small>Cuéntanos tu proyecto</a>
+  </div>
+</div>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-1 order-lg-1"
-          data-aos="fade-up" data-aos-delay="200">
-          <span class="hero-eyebrow">Zealep Soluciones · Tecnología para empresas</span>
-          <h1>Software a medida que impulsa tu negocio</h1>
-          <h2>Diseñamos aplicaciones web, móviles e integraciones robustas para que tu empresa venda, opere y crezca con
-            más velocidad.</h2>
+<main>
 
-          <div class="hero-actions d-flex justify-content-center justify-content-lg-start">
-            <a href="#contact" class="btn-get-started scrollto">Solicitar cotización</a>
-            <a href="#services" class="btn-services scrollto">Ver servicios</a>
-          </div>
-
-          <div class="hero-metrics" aria-label="Indicadores de confianza">
-            <div>
-              <strong>5+</strong>
-              <span>años de experiencia</span>
-            </div>
-            <div>
-              <strong>100%</strong>
-              <span>soluciones a medida</span>
-            </div>
-            <div>
-              <strong>Perú</strong>
-              <span>soporte cercano</span>
-            </div>
-          </div>
-
-        </div>
-        <div class="col-lg-6 order-2 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-          <img src="assets/img/hero-img.png" class="img-fluid animated" alt="Ilustración de soluciones tecnológicas">
-          <div class="hero-signal hero-signal-top">
-            <i class="bi bi-shield-check"></i>
-            <span>Soluciones seguras</span>
-          </div>
-          <div class="hero-signal hero-signal-bottom">
-            <i class="bi bi-lightning-charge"></i>
-            <span>Entrega ágil</span>
-          </div>
-        </div>
+<!-- ───────── Hero ───────── -->
+<header id="inicio" class="hero dark" data-cursor="light">
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <span class="eyebrow hero-in" style="--d:0">Zealep Soluciones · Software a medida · Web · Móvil · IA</span>
+      <h1 class="hero-title" data-split>Del requerimiento a producción<span class="dot-sq"></span></h1>
+      <p class="hero-lead hero-in" style="--d:6">Desde el primer día estamos contigo. Convertimos tu idea en software que funciona, y lo entregamos rápido, de forma eficiente y bien hecho.</p>
+      <div class="hero-actions hero-in" style="--d:7">
+        <a href="#contacto" class="btn btn-primary btn-lg magnetic">Cuéntanos tu proyecto <span class="arr">→</span></a>
+        <a href="#ruta" class="btn btn-outline-light btn-lg">Cómo trabajamos</a>
       </div>
     </div>
+    <div class="hero-art">
+      <svg class="route" viewBox="0 30 460 440" aria-hidden="true">
+        <g class="route-layer" data-depth="10">
+          <circle class="r-node" cx="70" cy="100" r="40" fill="none" stroke-width="35"/>
+          <path class="r-path" d="M120 100H400L100 380H340" fill="none" stroke-width="60" stroke-miterlimit="10" pathLength="1"/>
+          <path class="r-center" d="M70 100H400L100 380H390" fill="none"/>
+          <rect class="r-packet" x="-11" y="-11" width="22" height="22"/>
+        </g>
+        <g class="route-layer" data-depth="22">
+          <rect class="r-block" x="340" y="330" width="100" height="100"/>
+        </g>
+        <text class="r-label" x="150" y="52">01 · REQUERIMIENTO</text>
+        <text class="r-label" x="440" y="462" text-anchor="end">05 · PRODUCCIÓN</text>
+      </svg>
+    </div>
+  </div>
+  <div class="wrap hero-stats" data-stagger>
+    <div class="stat" data-reveal><b data-count="5" data-prefix="+">0</b><span>años de experiencia</span></div>
+    <div class="stat" data-reveal><b data-count="100" data-suffix="%">0</b><span>soluciones a medida</span></div>
+    <div class="stat" data-reveal><b data-count="24" data-suffix="h">0</b><span>para responderte</span></div>
+    <div class="stat" data-reveal><b>Perú</b><span>soporte cercano, desde Lima</span></div>
+  </div>
+  <a href="#servicios" class="scroll-cue" aria-label="Bajar"><span></span></a>
+</header>
 
-  </section><!-- End Hero -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Software a medida</span><i></i><span>Apps móviles</span><i></i><span>Web y SaaS</span><i></i><span>IA y datos</span><i></i><span>Integración de sistemas</span><i></i><span>Consultoría</span><i></i><span>Del requerimiento a producción</span><i></i>
+  </div>
+</div>
 
-  <main id="main">
+<!-- ───────── Servicios ───────── -->
+<section id="servicios" class="section wrap">
+  <div class="section-head">
+    <h2 data-split>Lo que construimos</h2>
+    <p data-reveal>Un solo equipo para todo el ciclo: estrategia, diseño, desarrollo y soporte. Sin pasarte de proveedor en proveedor.</p>
+  </div>
+  <div class="services" data-stagger>
+    <article class="service" data-reveal>
+      <div class="service-top"><span class="num"><i></i>01</span><svg class="ico" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+      <div><h3>Software a medida</h3><p>Sistemas internos, ERPs y automatización de procesos, hechos para cómo opera tu negocio.</p></div>
+      <ul class="service-tags"><li>ERP</li><li>CRM</li><li>Automatización</li></ul>
+    </article>
+    <article class="service" data-reveal>
+      <div class="service-top"><span class="num"><i></i>02</span><svg class="ico" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2"/><path d="M12 18h.01"/></svg></div>
+      <div><h3>Apps móviles</h3><p>Apps para iOS y Android, nativas o multiplataforma. Desde el MVP hasta su publicación en las tiendas.</p></div>
+      <ul class="service-tags"><li>iOS</li><li>Android</li><li>Flutter</li></ul>
+    </article>
+    <article class="service" data-reveal>
+      <div class="service-top"><span class="num"><i></i>03</span><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></div>
+      <div><h3>Web y SaaS</h3><p>Plataformas, portales y productos SaaS que escalan, con paneles de gestión, pagos e integraciones.</p></div>
+      <ul class="service-tags"><li>SaaS</li><li>Pagos</li><li>APIs</li></ul>
+    </article>
+    <article class="service" data-reveal>
+      <div class="service-top"><span class="num"><i></i>04</span><svg class="ico" viewBox="0 0 24 24"><rect width="16" height="16" x="4" y="4"/><rect width="6" height="6" x="9" y="9"/><path d="M15 2v2M15 20v2M2 15h2M2 9h2M20 15h2M20 9h2M9 2v2M9 20v2"/></svg></div>
+      <div><h3>IA y datos</h3><p>Asistentes, automatización con IA, analítica y tableros que te ayudan a decidir con datos.</p></div>
+      <ul class="service-tags"><li>Agentes IA</li><li>RAG</li><li>BI</li></ul>
+    </article>
+    <article class="service" data-reveal>
+      <div class="service-top"><span class="num"><i></i>05</span><svg class="ico" viewBox="0 0 24 24"><path d="M9 17H7A5 5 0 0 1 7 7h2"/><path d="M15 7h2a5 5 0 1 1 0 10h-2"/><path d="M8 12h8"/></svg></div>
+      <div><h3>Integración y soporte</h3><p>Conectamos tus sistemas para optimizar tus procesos, y los mantenemos funcionando con soporte y mantenimiento continuo.</p></div>
+      <ul class="service-tags"><li>APIs</li><li>ERP</li><li>Mantenimiento</li></ul>
+    </article>
+    <a href="#contacto" class="service service-cta" data-reveal>
+      <span class="num">Consultoría en tecnología</span>
+      <span class="service-cta-big">¿No sabes por dónde empezar? Lo definimos juntos <span class="arr">→</span></span>
+    </a>
+  </div>
+</section>
 
-    <!-- ======= Clients Section ======= -->
-    <section id="clients" class="clients section-bg">
-      <div class="container">
-        <p class="clients-kicker">Confianza de equipos que necesitan tecnología estable, clara y escalable</p>
-
-        <div class="row justify-content-center g-3" data-aos="zoom-in">
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center client-tile">
-            <img src="assets/img/clients/js-consulting.png" class="img-fluid" alt="Cliente JS Consulting">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center client-tile">
-            <img src="assets/img/clients/osinergmin.jpg" class="img-fluid" alt="Cliente Osinergmin">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center client-tile">
-            <img src="assets/img/clients/bbva.png" class="img-fluid" alt="Cliente BBVA">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center client-tile">
-            <img src="assets/img/clients/pointer.png" class="img-fluid" alt="Cliente Pointer">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center client-tile">
-            <img src="assets/img/clients/fractal.png" class="img-fluid" alt="Cliente Fractal">
-          </div>
-
+<!-- ───────── La ruta (sección fijada con scroll) ───────── -->
+<section id="ruta" class="ruta">
+  <div class="ruta-track">
+    <div class="ruta-sticky">
+      <div class="wrap ruta-inner">
+        <div class="section-head">
+          <h2 data-split>La ruta Zealep</h2>
+          <p data-reveal>Así trabajamos en cada proyecto. Empezamos por tu requerimiento y no te soltamos después de entregar.</p>
         </div>
-
+        <div class="steps" role="tablist">
+          <div class="steps-rail"><div class="steps-fill"></div></div>
+          <button class="step" role="tab" data-i="0"><span class="node node-circle"></span><small>01</small><b>Requerimiento</b></button>
+          <button class="step" role="tab" data-i="1"><span class="node"></span><small>02</small><b>Diseño</b></button>
+          <button class="step" role="tab" data-i="2"><span class="node"></span><small>03</small><b>Desarrollo</b></button>
+          <button class="step" role="tab" data-i="3"><span class="node"></span><small>04</small><b>Entrega</b></button>
+          <button class="step" role="tab" data-i="4"><span class="node node-end"></span><small>05</small><b>Acompañamiento</b></button>
+        </div>
+        <div class="panels">
+          <div class="panel" role="tabpanel">
+            <div class="panel-h"><span class="panel-n">01</span><h3>Requerimiento</h3></div>
+            <div class="panel-b"><p>Escuchamos tu idea o tu problema y lo convertimos en un alcance claro: objetivos, usuarios, prioridades y presupuesto. Sin tecnicismos.</p>
+              <dl><div><dt>Qué recibes</dt><dd>Documento de alcance y cotización</dd></div><div><dt>Tiempo típico</dt><dd>1 semana</dd></div></dl></div>
+          </div>
+          <div class="panel" role="tabpanel">
+            <div class="panel-h"><span class="panel-n">02</span><h3>Diseño</h3></div>
+            <div class="panel-b"><p>Diseñamos un prototipo navegable y lo validamos contigo antes de escribir una sola línea de código. Así, lo que se construye es lo que necesitas.</p>
+              <dl><div><dt>Qué recibes</dt><dd>Prototipo interactivo</dd></div><div><dt>Tiempo típico</dt><dd>1–2 semanas</dd></div></dl></div>
+          </div>
+          <div class="panel" role="tabpanel">
+            <div class="panel-h"><span class="panel-n">03</span><h3>Desarrollo</h3></div>
+            <div class="panel-b"><p>Trabajamos en sprints de dos semanas, con una demo al final de cada uno. Ves avances reales y puedes ajustar el rumbo sobre la marcha.</p>
+              <dl><div><dt>Qué recibes</dt><dd>Demos quincenales</dd></div><div><dt>Tiempo típico</dt><dd>4–12 semanas</dd></div></dl></div>
+          </div>
+          <div class="panel" role="tabpanel">
+            <div class="panel-h"><span class="panel-n">04</span><h3>Entrega</h3></div>
+            <div class="panel-b"><p>Publicamos en producción con pruebas, documentación y una capacitación para tu equipo. El código es tuyo.</p>
+              <dl><div><dt>Qué recibes</dt><dd>Producto en producción</dd></div><div><dt>Tiempo típico</dt><dd>1 semana</dd></div></dl></div>
+          </div>
+          <div class="panel" role="tabpanel">
+            <div class="panel-h"><span class="panel-n">05</span><h3>Acompañamiento</h3></div>
+            <div class="panel-b"><p>Seguimos contigo después de la entrega: soporte, monitoreo y nuevas funciones según lo que te pidan tus usuarios.</p>
+              <dl><div><dt>Qué recibes</dt><dd>Soporte y mejoras continuas</dd></div><div><dt>Tiempo típico</dt><dd>Continuo</dd></div></dl></div>
+          </div>
+        </div>
       </div>
-    </section><!-- End Cliens Section -->
+    </div>
+  </div>
+</section>
 
-    <!-- ======= About Us Section ======= -->
-    <section id="about" class="about">
-      <div class="container" data-aos="fade-up">
+<!-- ───────── Por qué ───────── -->
+<section class="section wrap why">
+  <div class="why-col"><span class="why-word" data-fill>Rápido.</span><p data-reveal>Diagnóstico antes de construir y ciclos cortos: tendrás software funcionando desde las primeras semanas y no solo documentos.</p></div>
+  <div class="why-col"><span class="why-word" data-fill>Eficiente.</span><p data-reveal>Más de 5 años de experiencia en proyectos empresariales, sin intermediarios. Cada hora se invierte en tu producto.</p></div>
+  <div class="why-col"><span class="why-word" data-fill>Bien hecho<em>.</em></span><p data-reveal>Revisamos el código, lo probamos con pruebas automatizadas y lo documentamos. Lo que entregamos está hecho para durar.</p></div>
+</section>
 
-        <div class="section-title">
-          <h2>Acerca de nosotros</h2>
-          <p>Somos el socio tecnológico que convierte necesidades de negocio en productos digitales funcionales.</p>
+<!-- ───────── Stack ───────── -->
+<section class="stack dark" data-cursor="light">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 data-split>Tecnología que dura</h2>
+      <p data-reveal>Elegimos herramientas probadas y con comunidad, para que tu producto sea fácil de mantener y de escalar.</p>
+    </div>
+    <ul class="stack-grid" data-stagger>
+      <li data-reveal><b>React</b><small>Web</small></li>
+      <li data-reveal><b>Next.js</b><small>Web</small></li>
+      <li data-reveal><b>Flutter</b><small>Móvil</small></li>
+      <li data-reveal><b>React Native</b><small>Móvil</small></li>
+      <li data-reveal><b>Node.js</b><small>Backend</small></li>
+      <li data-reveal><b>Python</b><small>Backend · IA</small></li>
+      <li data-reveal><b>PostgreSQL</b><small>Datos</small></li>
+      <li data-reveal><b>AWS</b><small>Nube</small></li>
+      <li data-reveal><b>Docker</b><small>DevOps</small></li>
+      <li data-reveal><b>LLMs</b><small>IA</small></li>
+      <li data-reveal><b>Stripe</b><small>Pagos</small></li>
+      <li data-reveal><b>Figma</b><small>Diseño</small></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ───────── Proyectos ───────── -->
+<section id="proyectos" class="section wrap">
+  <div class="section-head section-head-row">
+    <h2 data-split>Proyectos</h2>
+    <div class="filters" role="group" aria-label="Filtrar proyectos">
+      <button class="filter is-on" data-f="all">Todos</button>
+      <button class="filter" data-f="app">Apps</button>
+      <button class="filter" data-f="saas">SaaS</button>
+      <button class="filter" data-f="ia">IA</button>
+    </div>
+  </div>
+  <div class="projects">
+    <!-- Reemplaza .shot-ph por <img src="..." alt="..."> dentro de .shot (se verá en blanco y negro) -->
+    <a href="#contacto" class="project" data-cat="app" data-reveal>
+      <div class="shot grayscale"><div class="shot-ph"><span>01</span></div><span class="shot-cta">Ver caso <span class="arr">→</span></span></div>
+      <div class="project-meta"><h3>Nombre del proyecto</h3><span class="tag">App móvil</span></div>
+      <p>Una línea sobre el problema y el resultado: “redujimos un 40% el tiempo de pedidos”.</p>
+    </a>
+    <a href="#contacto" class="project" data-cat="saas" data-reveal>
+      <div class="shot grayscale"><div class="shot-ph"><span>02</span></div><span class="shot-cta">Ver caso <span class="arr">→</span></span></div>
+      <div class="project-meta"><h3>Nombre del proyecto</h3><span class="tag">Plataforma SaaS</span></div>
+      <p>Una línea sobre el problema y el resultado.</p>
+    </a>
+    <a href="#contacto" class="project" data-cat="ia" data-reveal>
+      <div class="shot grayscale"><div class="shot-ph"><span>03</span></div><span class="shot-cta">Ver caso <span class="arr">→</span></span></div>
+      <div class="project-meta"><h3>Nombre del proyecto</h3><span class="tag">IA y datos</span></div>
+      <p>Una línea sobre el problema y el resultado.</p>
+    </a>
+    <a href="#contacto" class="project" data-cat="saas" data-reveal>
+      <div class="shot grayscale"><div class="shot-ph"><span>04</span></div><span class="shot-cta">Ver caso <span class="arr">→</span></span></div>
+      <div class="project-meta"><h3>Nombre del proyecto</h3><span class="tag">Web</span></div>
+      <p>Una línea sobre el problema y el resultado.</p>
+    </a>
+  </div>
+</section>
+
+<!-- ───────── Testimonios ───────── -->
+<section class="quotes">
+  <div class="wrap quotes-inner">
+    <span class="quotes-mark" aria-hidden="true">“</span>
+    <div class="quotes-stage" aria-live="polite">
+      <!-- Testimonios de ejemplo: reemplázalos por reales antes de publicar -->
+      <figure class="quote is-on">
+        <blockquote>En seis semanas teníamos la app en las tiendas. Cada dos semanas veíamos avances reales.</blockquote>
+        <figcaption><b>Nombre Apellido</b> · Cargo, Empresa</figcaption>
+      </figure>
+      <figure class="quote">
+        <blockquote>Nos ayudaron a definir el alcance antes de escribir código. Eso nos ahorró meses.</blockquote>
+        <figcaption><b>Nombre Apellido</b> · Cargo, Empresa</figcaption>
+      </figure>
+      <figure class="quote">
+        <blockquote>Después de la entrega siguieron con nosotros. Se sienten parte del equipo.</blockquote>
+        <figcaption><b>Nombre Apellido</b> · Cargo, Empresa</figcaption>
+      </figure>
+    </div>
+    <div class="quotes-nav">
+      <button class="qbtn" data-q="-1" aria-label="Anterior">←</button>
+      <div class="qbar"><span></span></div>
+      <button class="qbtn" data-q="1" aria-label="Siguiente">→</button>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── Estimador ───────── -->
+<section id="estimador" class="section wrap">
+  <div class="section-head">
+    <h2 data-split>¿Cuánto tarda tu proyecto?</h2>
+    <p data-reveal>Elige qué quieres construir y te damos una estimación al instante. Luego la afinamos juntos en la primera llamada.</p>
+  </div>
+  <div class="est" data-reveal>
+    <div class="est-form">
+      <fieldset>
+        <legend>1 · ¿Qué quieres construir?</legend>
+        <div class="chips" data-group="type">
+          <button type="button" class="chip is-on" data-v="3">Landing / web</button>
+          <button type="button" class="chip" data-v="8">App móvil</button>
+          <button type="button" class="chip" data-v="10">Plataforma SaaS</button>
+          <button type="button" class="chip" data-v="9">Software a medida</button>
+          <button type="button" class="chip" data-v="6">Solución con IA</button>
         </div>
-
-        <div class="row content g-4 align-items-stretch">
-          <div class="col-lg-6 d-flex">
-            <div class="about-card about-card-copy">
-              <span class="section-kicker">Qué hacemos</span>
-              <p>
-                Somos una empresa dedicada al desarrollo de software con más de 5 años de experiencia en el mercado.
-                Creamos soluciones digitales pensadas para resolver procesos reales, mejorar la productividad y acompañar
-                el crecimiento de cada cliente con comunicación clara de principio a fin.
-              </p>
-              <ul>
-                <li><i class="ri-check-double-line"></i>Experiencia sólida en proyectos empresariales</li>
-                <li><i class="ri-check-double-line"></i>Equipo altamente capacitado</li>
-                <li><i class="ri-check-double-line"></i>Soluciones pensadas para cada operación</li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-6 d-flex">
-            <div class="about-card about-card-visual">
-              <div class="about-visual-copy">
-                <span class="section-kicker">Cómo trabajamos</span>
-                <p>
-                  Entendemos tus objetivos, proponemos una ruta viable y desarrollamos tecnología que pueda mantenerse,
-                  escalar y generar resultados medibles.
-                </p>
-              </div>
-
-              <img src="assets/img/undraw/undraw_elements.svg" class="img-fluid" alt="Elementos de diseño web">
-
-              <div class="about-highlights">
-                <span><strong>Diagnóstico</strong> antes de construir</span>
-                <span><strong>Entrega</strong> con seguimiento</span>
-              </div>
-            </div>
-          </div>
+      </fieldset>
+      <fieldset>
+        <legend>2 · ¿Qué tan grande?</legend>
+        <div class="chips" data-group="size">
+          <button type="button" class="chip is-on" data-v="1">MVP</button>
+          <button type="button" class="chip" data-v="1.6">Producto completo</button>
+          <button type="button" class="chip" data-v="2.4">Empresarial</button>
         </div>
-
+      </fieldset>
+      <fieldset>
+        <legend>3 · Extras</legend>
+        <div class="chips" data-group="extra" data-multi>
+          <button type="button" class="chip" data-v="1">Pagos en línea</button>
+          <button type="button" class="chip" data-v="2">Integraciones</button>
+          <button type="button" class="chip" data-v="2">Panel de administración</button>
+          <button type="button" class="chip" data-v="2">Funciones con IA</button>
+          <button type="button" class="chip" data-v="1">Varios idiomas</button>
+        </div>
+      </fieldset>
+    </div>
+    <div class="est-out dark" data-cursor="light">
+      <span class="eyebrow">Estimación</span>
+      <div class="est-weeks"><b class="est-num">3–4</b><span>semanas hasta producción</span></div>
+      <div class="est-bar" aria-hidden="true">
+        <span style="--w:12%"><i>Req.</i></span><span style="--w:18%"><i>Diseño</i></span><span style="--w:55%"><i>Desarrollo</i></span><span style="--w:15%"><i>Entrega</i></span>
       </div>
-    </section><!-- End About Us Section -->
+      <p class="est-note">Estimación orientativa. Incluye diseño, desarrollo, pruebas y publicación. El acompañamiento sigue después.</p>
+      <a href="#contacto" class="btn btn-primary btn-lg est-go magnetic">Quiero esta estimación <span class="arr">→</span></a>
+    </div>
+  </div>
+</section>
 
-    <!-- ======= Process Section ======= -->
-    <section id="process" class="process">
-      <div class="container" data-aos="fade-up">
+<!-- ───────── FAQ ───────── -->
+<section id="faq" class="section wrap faq-sec">
+  <div class="section-head">
+    <h2 data-split>Preguntas frecuentes</h2>
+    <p data-reveal>Lo que casi todos nos preguntan antes de empezar.</p>
+  </div>
+  <div class="faq" data-stagger>
+    <div class="qa" data-reveal><button class="qa-q" aria-expanded="false">¿Cuánto cuesta un proyecto?<i></i></button><div class="qa-a"><div><p>Depende del alcance. En la etapa de requerimiento te entregamos una cotización cerrada por fases, para que sepas exactamente qué pagas y qué recibes en cada una.</p></div></div></div>
+    <div class="qa" data-reveal><button class="qa-q" aria-expanded="false">¿El código es mío?<i></i></button><div class="qa-a"><div><p>Sí. Al finalizar te entregamos el repositorio, la documentación y los accesos. No hay dependencia con nosotros.</p></div></div></div>
+    <div class="qa" data-reveal><button class="qa-q" aria-expanded="false">¿Puedo ver avances durante el desarrollo?<i></i></button><div class="qa-a"><div><p>Cada dos semanas hacemos una demo con lo construido. Puedes probarlo, opinar y ajustar prioridades sobre la marcha.</p></div></div></div>
+    <div class="qa" data-reveal><button class="qa-q" aria-expanded="false">¿Dónde están y con quién trabajan?<i></i></button><div class="qa-a"><div><p>Estamos en San Borja, Lima. Trabajamos con empresas de todo el Perú y del extranjero, en persona o de forma remota, con videollamadas y herramientas compartidas para que sigas el proyecto en tiempo real.</p></div></div></div>
+    <div class="qa" data-reveal><button class="qa-q" aria-expanded="false">¿Qué pasa después de la entrega?<i></i></button><div class="qa-a"><div><p>Seguimos contigo: soporte, monitoreo y nuevas funciones. Puedes elegir un plan mensual o pedir mejoras puntuales.</p></div></div></div>
+  </div>
+</section>
 
-        <div class="section-title">
-          <h2>Proceso de trabajo</h2>
-          <p>Una ruta clara para pasar de una necesidad de negocio a una solución lista para operar.</p>
+<!-- ───────── Contacto ───────── -->
+<section id="contacto" class="contact" data-cursor="ink">
+  <div class="wrap contact-inner">
+    <div class="contact-copy">
+      <h2 data-split>¿Tienes un requerimiento? Empecemos por ahí.</h2>
+      <p class="contact-sub" data-reveal>Te respondemos en menos de 24 horas.</p>
+      <ul class="contact-alt" data-reveal>
+        <li><a href="https://wa.me/51994339535?text=Hola%20Zealep%2C%20quiero%20contarles%20sobre%20mi%20proyecto" target="_blank" rel="noopener">WhatsApp +51 994 339 535 →</a></li>
+        <li><a href="mailto:cristhianpelaez@zealepsoluciones.com">cristhianpelaez@zealepsoluciones.com</a></li>
+        <li><span>Jirón Rutherford 191, San Borja, Lima</span></li>
+      </ul>
+    </div>
+    <div class="form-card" data-reveal>
+      <!-- Envío por Formspree: es el mismo formulario que usa zealepsoluciones.com. Si el action volviera a "TU_ID",
+           el botón abriría el correo del visitante con el mensaje listo para data-mailto. -->
+      <form class="form" action="https://formspree.io/f/xayzeeav" method="POST" data-mailto="cristhianpelaez@zealepsoluciones.com" novalidate>
+        <input type="hidden" name="necesidades">
+        <input type="hidden" name="_subject" value="Nuevo requerimiento desde zealepsoluciones.com">
+        <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="form-row">
+          <span class="lbl">¿Qué necesitas?</span>
+          <div class="chips" data-group="need" data-multi>
+            <button type="button" class="chip">Software a medida</button>
+            <button type="button" class="chip">App móvil</button>
+            <button type="button" class="chip">Web / SaaS</button>
+            <button type="button" class="chip">IA y datos</button>
+            <button type="button" class="chip">Integración</button>
+            <button type="button" class="chip">Soporte</button>
+            <button type="button" class="chip">Consultoría</button>
+          </div>
         </div>
-
-        <div class="row g-4">
-          <div class="col-lg-4 d-flex" data-aos="fade-up" data-aos-delay="100">
-            <div class="process-card">
-              <div class="process-top">
-                <span>01</span>
-                <i class="bi bi-search"></i>
-              </div>
-              <h3>Analizamos</h3>
-              <p>Levantamos necesidades, revisamos procesos y definimos prioridades para construir lo correcto.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 d-flex" data-aos="fade-up" data-aos-delay="200">
-            <div class="process-card">
-              <div class="process-top">
-                <span>02</span>
-                <i class="bi bi-braces"></i>
-              </div>
-              <h3>Diseñamos y desarrollamos</h3>
-              <p>Convertimos la solución en interfaces, sistemas e integraciones pensadas para uso real.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 d-flex" data-aos="fade-up" data-aos-delay="300">
-            <div class="process-card">
-              <div class="process-top">
-                <span>03</span>
-                <i class="bi bi-rocket-takeoff"></i>
-              </div>
-              <h3>Implementamos</h3>
-              <p>Acompañamos la salida, medimos resultados y dejamos una base preparada para seguir creciendo.</p>
-            </div>
-          </div>
+        <div class="form-2">
+          <label class="fl"><input name="name" autocomplete="name" required placeholder=" "><span>Nombre</span></label>
+          <label class="fl"><input name="email" type="email" autocomplete="email" required placeholder=" "><span>Correo</span></label>
         </div>
-
+        <label class="fl"><textarea name="message" rows="4" placeholder=" "></textarea><span>Cuéntanos tu idea: qué, para quién y para cuándo</span></label>
+        <button type="submit" class="btn btn-primary btn-lg btn-block form-send">
+          <span class="send-label">Enviar requerimiento</span><span class="arr">→</span><span class="send-bar"></span>
+        </button>
+        <p class="form-error" role="alert" hidden>No pudimos enviar tu mensaje. Inténtalo de nuevo o escríbenos por <a href="https://wa.me/51994339535" target="_blank" rel="noopener">WhatsApp</a> o a <a href="mailto:cristhianpelaez@zealepsoluciones.com">cristhianpelaez@zealepsoluciones.com</a>.</p>
+      </form>
+      <div class="sent" hidden>
+        <svg viewBox="0 2.5 46 42.5" class="sent-mark" aria-hidden="true">
+          <circle cx="7" cy="10" r="4" fill="none" stroke-width="3.5"/>
+          <path d="M12 10H40L10 38H34" fill="none" stroke-width="6" stroke-miterlimit="10" pathLength="1"/>
+          <rect x="34" y="33" width="10" height="10"/>
+        </svg>
+        <h3>Recibido.</h3>
+        <p>Ese es el primer punto de la ruta. Te escribimos en menos de 24 horas para agendar una llamada.</p>
       </div>
-    </section><!-- End Process Section -->
+    </div>
+  </div>
+</section>
 
-    <!-- ======= Why Us Section ======= -->
-    <section id="why-us" class="why-us section-bg">
-      <div class="container-fluid" data-aos="fade-up">
+</main>
 
-        <div class="row">
-
-          <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
-
-            <div class="content">
-              <h3>Construimos tecnología útil, <strong>con foco en eficiencia, seguridad y crecimiento empresarial</strong></h3>
-              <p>
-                Cada proyecto se trabaja con diagnóstico, planificación y desarrollo a medida. El resultado: sistemas
-                más claros, procesos más rápidos y herramientas listas para crecer junto a tu empresa.
-              </p>
-            </div>
-
-            <div class="accordion-list">
-              <ul>
-                <li>
-                  <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1"><span>01</span>¿Por
-                    qué debo elegir su experiencia en la industria? <i class="bx bx-chevron-down icon-show"></i><i
-                      class="bx bx-chevron-up icon-close"></i></a>
-                  <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
-                    <p>
-                      Nuestra amplia experiencia en la industria nos ha permitido adquirir un conocimiento profundo y
-                      una comprensión de las mejores prácticas y tendencias en el desarrollo de software. Esto nos
-                      permite ofrecer soluciones innovadoras y efectivas que cumplen con las expectativas y necesidades
-                      de nuestros clientes.
-                    </p>
-                  </div>
-                </li>
-
-                <li>
-                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed"><span>02</span> ¿Qué
-                    me asegura de la calidad de su trabajo? <i class="bx bx-chevron-down icon-show"></i><i
-                      class="bx bx-chevron-up icon-close"></i></a>
-                  <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
-                    <p>
-                      Nuestro equipo de expertos en tecnología se esfuerza por mantener una alta calidad en todo
-                      momento. Además, nos aseguramos de mantener una comunicación abierta y transparente con nuestros
-                      clientes para garantizar su satisfacción en cada etapa del proceso.
-                    </p>
-                  </div>
-                </li>
-
-                <li>
-                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed"><span>03</span> ¿Qué
-                    me asegura de su compromiso con mi éxito? <i class="bx bx-chevron-down icon-show"></i><i
-                      class="bx bx-chevron-up icon-close"></i></a>
-                  <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
-                    <p>
-                      Nos esforzamos por brindar un servicio excepcional y un soporte continuo, incluso después de la
-                      entrega final del proyecto. Nos importa el éxito de nuestros clientes y trabajamos incansablemente
-                      para ayudarlos a lograr sus objetivos tecnológicos.
-                    </p>
-                  </div>
-                </li>
-
-              </ul>
-            </div>
-
-          </div>
-
-          <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img"
-            style='background-image: url("assets/img/why-us.png");' data-aos="zoom-in" data-aos-delay="150">&nbsp;</div>
-        </div>
-
-      </div>
-    </section><!-- End Why Us Section -->
-
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services section-bg">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Servicios</h2>
-          <p>Desarrollamos soluciones digitales para empresas que necesitan ordenar procesos, automatizar tareas y crear
-            experiencias confiables para sus usuarios.</p>
-        </div>
-
-        <div class="row">
-          <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-box">
-              <div class="service-topline">
-                <span class="service-number">01</span>
-                <span class="service-tag">Web + móvil</span>
-              </div>
-              <div class="icon">
-                <img src="assets/img/undraw/undraw_code_review.svg" class="img-fluid" alt="Desarrollo de aplicaciones">
-              </div>
-              <h4><a href="#contact" class="scrollto">Desarrollo de aplicaciones web y móviles</a></h4>
-              <p>Creamos aplicaciones personalizadas y de alta calidad que mejoran la eficiencia y productividad de su
-                negocio</p>
-              <a href="#contact" class="service-link scrollto">Cotizar este servicio <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in"
-            data-aos-delay="200">
-            <div class="icon-box">
-              <div class="service-topline">
-                <span class="service-number">02</span>
-                <span class="service-tag">Procesos conectados</span>
-              </div>
-              <div class="icon">
-                <img src="assets/img/undraw/undraw_software_engineer.svg" class="img-fluid"
-                  alt="Ingeniería de software">
-              </div>
-              <h4><a href="#contact" class="scrollto">Integración de sistemas</a></h4>
-              <p>Nos especializamos en la integración de diferentes sistemas para optimizar sus procesos empresariales
-              </p>
-              <a href="#contact" class="service-link scrollto">Cotizar este servicio <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in"
-            data-aos-delay="300">
-            <div class="icon-box">
-              <div class="service-topline">
-                <span class="service-number">03</span>
-                <span class="service-tag">A medida</span>
-              </div>
-              <div class="icon">
-                <img src="assets/img/undraw/undraw_programming.svg" class="img-fluid" alt="Programación a medida">
-              </div>
-              <h4><a href="#contact" class="scrollto">Desarrollo de software a medida</a></h4>
-              <p>Trabajamos con usted para entender sus necesidades y crear una solución de software que se ajuste
-                perfectamente a su empresa</p>
-              <a href="#contact" class="service-link scrollto">Cotizar este servicio <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in"
-            data-aos-delay="400">
-            <div class="icon-box">
-              <div class="service-topline">
-                <span class="service-number">04</span>
-                <span class="service-tag">Estrategia</span>
-              </div>
-              <div class="icon">
-                <img src="assets/img/undraw/undraw_setup_wizard.svg" class="img-fluid" alt="Consultoría tecnológica">
-              </div>
-              <h4><a href="#contact" class="scrollto">Consultoría en tecnología</a></h4>
-              <p>Brindamos asesoramiento experto en tecnología para ayudar a su empresa a tomar decisiones informadas y
-                avanzar en su camino hacia el éxito</p>
-              <a href="#contact" class="service-link scrollto">Cotizar este servicio <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Services Section -->
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Contáctanos</h2>
-          <p>Estamos aquí para ayudarte. Si tienes alguna pregunta o quieres saber más sobre nuestros servicios, no
-            dudes en ponerte en contacto con nosotros.</p>
-          <p>Cuéntanos qué necesitas construir o mejorar y te ayudamos a definir el siguiente paso.</p>
-        </div>
-
-        <div class="contact-shell">
-          <div class="row g-4">
-
-          <div class="col-lg-5 d-flex align-items-stretch">
-            <div class="info">
-              <div class="address">
-                <i class="bi bi-geo-alt"></i>
-                <h4>Dirección</h4>
-                <p>Jirón Rutherford 191 - San Borja</p>
-              </div>
-
-              <div class="email">
-                <i class="bi bi-envelope"></i>
-                <h4>Email</h4>
-                <p>cristhianpelaez@zealepsoluciones.com</p>
-              </div>
-
-              <div class="phone">
-                <i class="bi bi-phone"></i>
-                <h4>Celular:</h4>
-                <p>+51 994339535</p>
-              </div>
-
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.0678422899805!2d-77.01113018457475!3d-12.107508146331387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c7e072ad1555%3A0x5e153f0234ec8f29!2sJr.%20Ernesto%20Rutherford%20193%2C%20Lima%2015036%2C%20Per%C3%BA!5e0!3m2!1ses!2sus!4v1675744405125!5m2!1ses!2sus"
-                width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-
-          </div>
-
-          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-
-
-            <form action="https://formspree.io/f/xayzeeav" method="post" role="form" class="php-email-form">
-              <div class="form-intro">
-                <span>Hablemos de tu proyecto</span>
-                <h3>Recibe una orientación inicial</h3>
-              </div>
-              <div class="row">
-                <div class="form-group col-md-6">
-                  <label for="name">Tu nombre</label>
-                  <input type="text" name="name" class="form-control" id="name" required>
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="email">Tu correo electrónico</label>
-                  <input type="email" class="form-control" name="email" id="email" required>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="subject">Asunto</label>
-                <input type="text" class="form-control" name="subject" id="subject" required>
-              </div>
-              <div class="form-group">
-                <label for="message">Mensaje</label>
-                <textarea class="form-control" name="message" id="message" rows="10" required></textarea>
-              </div>
-              <div class="my-3">
-
-                <div class="sent-message">Tu mensaje fue enviado, gracias por contactarnos!</div>
-              </div>
-              <div class="text-center"><button type="submit">Enviar mensaje</button></div>
-            </form>
-
-          </div>
-
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End Contact Section -->
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-
+<!-- ───────── Footer ───────── -->
+<footer class="footer dark" data-cursor="light">
+  <div class="wrap">
     <div class="footer-top">
-      <div class="container">
-        <div class="footer-cta">
-          <div>
-            <span>Listos para construir</span>
-            <h3>Convierte tus procesos en una solución digital clara, segura y escalable.</h3>
-          </div>
-          <a href="#contact" class="footer-cta-btn scrollto">Cotizar proyecto</a>
-        </div>
-
-        <div class="row footer-grid">
-
-          <div class="col-lg-4 col-md-6 footer-contact footer-brand">
-            <img src="assets/img/zealep-logo-header.png" alt="Zealep Soluciones">
-            <p>
-              Desarrollo de software, aplicaciones web, soluciones móviles e integraciones para empresas que quieren
-              operar mejor.
-            </p>
-            <p>
-              Jirón Rutherford 191 <br>
-              San Borja, Lima<br>
-              Perú <br><br>
-              <strong>Celular:</strong> +51 994339535<br>
-              <strong>Email:</strong> cristhianpelaez@zealepsoluciones.com<br>
-            </p>
-          </div>
-
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#hero">Inicio</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#about">Acerca</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#services">Servicios</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#process">Proceso</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Nuestros Servicios</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#services">Desarrollo Web</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#services">Desarrollo Mobile</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#services">Integración de sistemas</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#services">Soporte y mantenimiento de sistemas</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#services">Análisis y diseño</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Conecta con Zealep</h4>
-            <p>Conversemos sobre nuevas ideas, mejoras para tu operación y soluciones digitales listas para crecer.</p>
-            <div class="social-links mt-3">
-              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-            </div>
-          </div>
-
-        </div>
+      <p class="footer-claim" data-split>Del requerimiento a producción.</p>
+      <div class="footer-cols">
+        <div><span class="eyebrow">Contacto</span><a href="mailto:cristhianpelaez@zealepsoluciones.com">cristhianpelaez@zealepsoluciones.com</a><a href="https://wa.me/51994339535" target="_blank" rel="noopener">+51 994 339 535</a></div>
+        <div><span class="eyebrow">Oficina</span><span>Jirón Rutherford 191</span><span>San Borja, Lima</span><span>Perú</span></div>
+        <div><span class="eyebrow">Servicios</span><a href="#servicios">Desarrollo web y móvil</a><a href="#servicios">Software a medida</a><a href="#servicios">Integración de sistemas</a><a href="#servicios">Soporte y mantenimiento</a></div>
       </div>
     </div>
+    <div class="footer-logo"><img src="logo/svg/zealep-horizontal-blanco.svg" alt="Zealep"></div>
+    <div class="footer-bottom"><span>© <span class="year">2026</span> Zealep Soluciones. Todos los derechos reservados.</span><a href="#inicio" class="to-top">Volver arriba ↑</a></div>
+  </div>
+</footer>
 
-    <div class="container footer-bottom clearfix">
-      <div class="copyright">
-        &copy; Copyright <strong><span>Zealep</span></strong>. Todos los derechos reservados
-      </div>
-    </div>
+<a href="https://wa.me/51994339535?text=Hola%20Zealep%2C%20quiero%20contarles%20sobre%20mi%20proyecto" class="wa magnetic" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+</a>
 
-  </footer><!-- End Footer -->
-
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
+<script src="js/main.js"></script>
 </body>
-
 </html>
