@@ -117,6 +117,7 @@
   /* ── Ruta Zealep ── */
   const ruta = $('#ruta'), rTrack = $('.ruta-track');
   const steps = $$('.step'), panels = $$('.panel'), fill = $('.steps-fill');
+  steps.forEach((s, i) => { s.id = `tab-${i}`; s.setAttribute('aria-controls', `panel-${i}`); panels[i].id = `panel-${i}`; panels[i].setAttribute('aria-labelledby', `tab-${i}`); });
   const pinMQ = matchMedia('(min-width: 900px) and (min-height: 700px)');
   let active = -1, autoplay = null;
   function setStep(i, fillP = i / 4) {
@@ -130,7 +131,7 @@
   function applyPin() {
     ruta.classList.toggle('is-pinned', pinned());
     clearInterval(autoplay);
-    if (!pinned()) autoplay = setInterval(() => setStep((active + 1) % 5), 4500);
+    if (!pinned() && !reduce) autoplay = setInterval(() => setStep((active + 1) % 5), 6000);
   }
   steps.forEach((s, i) => s.addEventListener('click', () => {
     if (pinned()) {
@@ -168,7 +169,7 @@
       mx -= (0.6 + Math.min(Math.abs(vel) * .35, 14)) * dir;
       const half = track.scrollWidth / 2;
       if (mx <= -half) mx += half; if (mx > 0) mx -= half;
-      track.style.transform = `translate3d(${mx}px,0,0) skewX(${clamp(-vel * .25, -8, 8)}deg)`;
+      track.style.transform = `translate3d(${mx}px,0,0) skewX(${clamp(-vel * .15, -4, 4)}deg)`;
     }
 
     words.forEach(w => {
@@ -196,8 +197,13 @@
   function menu(open) {
     document.body.classList.toggle('menu-open', open);
     burger.setAttribute('aria-expanded', open);
+    burger.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
     $('.menu').setAttribute('aria-hidden', !open);
   }
+  addEventListener('keydown', e => {
+    if (e.key === 'Escape' && document.body.classList.contains('menu-open')) { menu(false); burger.focus(); }
+  });
+  matchMedia('(min-width: 1081px)').addEventListener('change', e => { if (e.matches) menu(false); });
   burger.addEventListener('click', () => menu(!document.body.classList.contains('menu-open')));
   $$('.menu a').forEach(a => a.addEventListener('click', () => menu(false)));
 
@@ -237,8 +243,9 @@
 
   /* ── Filtro de proyectos ── */
   const filters = $$('.filter'), projects = $$('.project');
+  filters.forEach(f => f.setAttribute('aria-pressed', f.classList.contains('is-on')));
   filters.forEach(f => f.addEventListener('click', () => {
-    filters.forEach(x => x.classList.toggle('is-on', x === f));
+    filters.forEach(x => { x.classList.toggle('is-on', x === f); x.setAttribute('aria-pressed', x === f); });
     const cat = f.dataset.f;
     projects.forEach(p => p.classList.add('is-fading'));
     setTimeout(() => {
@@ -249,23 +256,40 @@
 
   /* ── Testimonios ── */
   const quotes = $$('.quote'), qbar = $('.qbar span');
-  let q = 0, qTimer;
+  let q = 0, qTimer, qPaused = reduce;
+  const qPause = $('.qpause'), qSection = $('.quotes');
+  const syncPause = () => {
+    qPause.setAttribute('aria-pressed', qPaused);
+    qPause.setAttribute('aria-label', qPaused ? 'Reanudar rotación automática' : 'Pausar rotación automática');
+  };
   function showQuote(i) {
     q = (i + quotes.length) % quotes.length;
     quotes.forEach((el, k) => el.classList.toggle('is-on', k === q));
-    qbar.classList.remove('is-run'); void qbar.offsetWidth; qbar.classList.add('is-run');
+    qbar.classList.remove('is-run'); void qbar.offsetWidth;
     clearTimeout(qTimer);
-    qTimer = setTimeout(() => showQuote(q + 1), 6000);
+    if (!qPaused) { qbar.classList.add('is-run'); qTimer = setTimeout(() => showQuote(q + 1), 7000); }
   }
-  $$('.qbtn').forEach(b => b.addEventListener('click', () => showQuote(q + +b.dataset.q)));
+  $$('.qbtn[data-q]').forEach(b => b.addEventListener('click', () => showQuote(q + +b.dataset.q)));
+  qPause.addEventListener('click', () => { qPaused = !qPaused; syncPause(); showQuote(q); });
+  // El carrusel se detiene mientras el visitante lo está leyendo o enfocando
+  let qHold = false;
+  const hold = on => { if (qPaused || qHold === on) return; qHold = on; if (on) { clearTimeout(qTimer); qbar.classList.remove('is-run'); } else showQuote(q); };
+  qSection.addEventListener('mouseenter', () => hold(true));
+  qSection.addEventListener('mouseleave', () => hold(false));
+  qSection.addEventListener('focusin', () => hold(true));
+  qSection.addEventListener('focusout', () => hold(false));
+  syncPause();
   showQuote(0);
 
   /* ── Chips (selección simple o múltiple) ── */
   $$('.chips').forEach(g => {
     const multi = g.hasAttribute('data-multi');
+    const sync = () => $$('.chip', g).forEach(x => x.setAttribute('aria-pressed', x.classList.contains('is-on')));
+    sync();
     $$('.chip', g).forEach(c => c.addEventListener('click', () => {
       if (multi) c.classList.toggle('is-on');
       else $$('.chip', g).forEach(x => x.classList.toggle('is-on', x === c));
+      sync();
       g.dispatchEvent(new Event('change', { bubbles: true }));
     }));
   });
@@ -321,7 +345,11 @@
   }
   function showSent() {
     form.hidden = true;
-    $('.sent').hidden = false;
+    const sent = $('.sent');
+    sent.hidden = false;
+    sent.setAttribute('tabindex', '-1');
+    sent.setAttribute('role', 'status');
+    sent.focus({ preventScroll: true });
   }
 
   form.addEventListener('submit', async e => {
@@ -331,6 +359,8 @@
     $$('.fl input', form).forEach(inp => {
       const bad = !inp.checkValidity() || !inp.value.trim();
       inp.closest('.fl').classList.toggle('is-error', bad);
+      inp.setAttribute('aria-invalid', bad);
+      $('.fl-err', inp.closest('.fl-wrap')).hidden = !bad;
       if (bad) ok = false;
     });
     if (!ok) return $('.fl.is-error input', form).focus();
@@ -357,5 +387,9 @@
       formError.hidden = false;
     }
   });
-  $$('.fl input', form).forEach(inp => inp.addEventListener('input', () => inp.closest('.fl').classList.remove('is-error')));
+  $$('.fl input', form).forEach(inp => inp.addEventListener('input', () => {
+    inp.closest('.fl').classList.remove('is-error');
+    inp.setAttribute('aria-invalid', false);
+    $('.fl-err', inp.closest('.fl-wrap')).hidden = true;
+  }));
 })();

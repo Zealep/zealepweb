@@ -19,11 +19,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
+<noscript><style>.loader{display:none}body.is-loading{overflow:auto}[data-reveal],.hero-in,.footer-logo img{opacity:1!important;transform:none!important}.w>span{transform:none!important}.r-path{stroke-dashoffset:0}.r-node,.r-label{opacity:1}.r-block{transform:none}.panel{visibility:visible}.panel>*{opacity:1;transform:none}.quote{position:static}</style></noscript>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"ProfessionalService","name":"Zealep Soluciones","url":"https://zealepsoluciones.com","logo":"https://zealepsoluciones.com/logo/png/zealep-horizontal-color.png","image":"https://zealepsoluciones.com/logo/png/zealep-horizontal-color.png","email":"cristhianpelaez@zealepsoluciones.com","telephone":"+51 994339535","slogan":"Del requerimiento a producción","address":{"@type":"PostalAddress","streetAddress":"Jirón Rutherford 191","addressLocality":"San Borja, Lima","addressCountry":"PE"},"areaServed":"PE"}
 </script>
 </head>
 <body class="is-loading">
+<a href="#contenido" class="skip">Saltar al contenido</a>
 
 <!-- ───────── Preloader: la Z se dibuja ───────── -->
 <div class="loader" aria-hidden="true">
@@ -50,11 +52,11 @@
       <a href="#faq" class="nav-link">FAQ</a>
     </div>
     <a href="#contacto" class="btn btn-primary nav-cta magnetic">Cuéntanos tu proyecto</a>
-    <button class="nav-burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span></button>
+    <button class="nav-burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
   </div>
 </nav>
 
-<div class="menu" aria-hidden="true">
+<div class="menu" id="menu" aria-hidden="true">
   <div class="wrap menu-inner">
     <a href="#servicios"><small>01</small>Servicios</a>
     <a href="#ruta"><small>02</small>Cómo trabajamos</a>
@@ -65,7 +67,7 @@
   </div>
 </div>
 
-<main>
+<main id="contenido" tabindex="-1">
 
 <!-- ───────── Hero ───────── -->
 <header id="inicio" class="hero dark" data-cursor="light">
@@ -201,9 +203,9 @@
 
 <!-- ───────── Por qué ───────── -->
 <section class="section wrap why">
-  <div class="why-col"><span class="why-word" data-fill>Rápido.</span><p data-reveal>Diagnóstico antes de construir y ciclos cortos: tendrás software funcionando desde las primeras semanas y no solo documentos.</p></div>
-  <div class="why-col"><span class="why-word" data-fill>Eficiente.</span><p data-reveal>Más de 5 años de experiencia en proyectos empresariales, sin intermediarios. Cada hora se invierte en tu producto.</p></div>
-  <div class="why-col"><span class="why-word" data-fill>Bien hecho<em>.</em></span><p data-reveal>Revisamos el código, lo probamos con pruebas automatizadas y lo documentamos. Lo que entregamos está hecho para durar.</p></div>
+  <div class="why-col"><span class="why-word" data-fill>Rápido.<span class="fill" aria-hidden="true">Rápido.</span></span><p data-reveal>Diagnóstico antes de construir y ciclos cortos: tendrás software funcionando desde las primeras semanas y no solo documentos.</p></div>
+  <div class="why-col"><span class="why-word" data-fill>Eficiente.<span class="fill" aria-hidden="true">Eficiente.</span></span><p data-reveal>Más de 5 años de experiencia en proyectos empresariales, sin intermediarios. Cada hora se invierte en tu producto.</p></div>
+  <div class="why-col"><span class="why-word" data-fill>Bien hecho<em>.</em><span class="fill" aria-hidden="true">Bien hecho<em>.</em></span></span><p data-reveal>Revisamos el código, lo probamos con pruebas automatizadas y lo documentamos. Lo que entregamos está hecho para durar.</p></div>
 </section>
 
 <!-- ───────── Stack ───────── -->
@@ -286,9 +288,13 @@
       </figure>
     </div>
     <div class="quotes-nav">
-      <button class="qbtn" data-q="-1" aria-label="Anterior">←</button>
-      <div class="qbar"><span></span></div>
-      <button class="qbtn" data-q="1" aria-label="Siguiente">→</button>
+      <button class="qbtn" data-q="-1" aria-label="Testimonio anterior">←</button>
+      <div class="qbar" aria-hidden="true"><span></span></div>
+      <button class="qbtn" data-q="1" aria-label="Testimonio siguiente">→</button>
+      <button class="qbtn qpause" type="button" aria-label="Pausar rotación automática" aria-pressed="false">
+        <svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14"/></svg>
+        <svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>
+      </button>
     </div>
   </div>
 </section>
@@ -365,7 +371,7 @@
       <p class="contact-sub" data-reveal>Te respondemos en menos de 24 horas.</p>
       <ul class="contact-alt" data-reveal>
         <li><a href="https://wa.me/51994339535?text=Hola%20Zealep%2C%20quiero%20contarles%20sobre%20mi%20proyecto" target="_blank" rel="noopener">WhatsApp +51 994 339 535 →</a></li>
-        <li><a href="mailto:cristhianpelaez@zealepsoluciones.com">cristhianpelaez@zealepsoluciones.com</a></li>
+        <li><a href="mailto:cristhianpelaez@zealepsoluciones.com">cristhianpelaez@<wbr>zealepsoluciones.com</a></li>
         <li><span>Jirón Rutherford 191, San Borja, Lima</span></li>
       </ul>
     </div>
@@ -389,8 +395,14 @@
           </div>
         </div>
         <div class="form-2">
-          <label class="fl"><input name="name" autocomplete="name" required placeholder=" "><span>Nombre</span></label>
-          <label class="fl"><input name="email" type="email" autocomplete="email" required placeholder=" "><span>Correo</span></label>
+          <div class="fl-wrap">
+            <label class="fl"><input name="name" autocomplete="name" required aria-required="true" aria-describedby="err-name" placeholder=" "><span>Nombre</span></label>
+            <p class="fl-err" id="err-name" hidden>Escribe tu nombre para poder responderte.</p>
+          </div>
+          <div class="fl-wrap">
+            <label class="fl"><input name="email" type="email" autocomplete="email" required aria-required="true" aria-describedby="err-email" placeholder=" "><span>Correo</span></label>
+            <p class="fl-err" id="err-email" hidden>Escribe un correo válido, por ejemplo nombre@empresa.com.</p>
+          </div>
         </div>
         <label class="fl"><textarea name="message" rows="4" placeholder=" "></textarea><span>Cuéntanos tu idea: qué, para quién y para cuándo</span></label>
         <button type="submit" class="btn btn-primary btn-lg btn-block form-send">
