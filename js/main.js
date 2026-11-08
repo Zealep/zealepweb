@@ -246,7 +246,6 @@
       requestAnimationFrame(() => requestAnimationFrame(() => projects.forEach(p => p.classList.remove('is-fading'))));
     }, 300);
   }));
-
   /* ── Testimonios ── */
   const quotes = $$('.quote'), qbar = $('.qbar span');
   let q = 0, qTimer;
